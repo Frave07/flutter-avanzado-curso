@@ -12,8 +12,8 @@ class BandModels
     });
 
     factory BandModels.fromMap( Map<String, dynamic> obj ) => BandModels(
-        id: obj['id'],
-        nombre: obj['nombre'],
-        votos: obj['votos']
+        id     : obj.containsKey('id') ? obj['id'] : 'no-id',
+        nombre : obj.containsKey('nombre') ? obj['nombre'] : 'no-nombre',
+        votos  : obj.containsKey('votos') ? obj['votos'] : 'no-votos'
     );
 }
